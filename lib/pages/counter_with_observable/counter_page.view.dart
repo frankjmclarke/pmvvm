@@ -35,10 +35,11 @@ class _CounterPageView extends StatelessView<CounterPageVM> {
 
   final MyWidgetProps props;
 
-  @override
-  Widget render(context, page) {
-    return Scaffold(
-      appBar: AppBar(title: Text(page.title)),
+   @override
+  Widget render(context, pageVM) {
+     //pageVM.counter.stream.listen((value) { });
+     return Scaffold(
+      appBar: AppBar(title: Text(pageVM.title)),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -57,14 +58,14 @@ class _CounterPageView extends StatelessView<CounterPageVM> {
             ), */
 
             Text(
-              page.counter.value.toString(),
+              pageVM.counter.value.toString(),
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: page.increase,
+        onPressed: pageVM.increase,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
