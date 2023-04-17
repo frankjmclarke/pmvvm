@@ -1,4 +1,4 @@
-package comclarkepmvvm
+package com.fclarke.pmvvm
 
 import io.flutter.embedding.android.FlutterActivity
 
